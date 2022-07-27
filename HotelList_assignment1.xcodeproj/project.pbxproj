@@ -12,6 +12,9 @@
 		675A08EA2890FCD600048C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675A08E92890FCD600048C31 /* Assets.xcassets */; };
 		675A08ED2890FCD600048C31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675A08EC2890FCD600048C31 /* Preview Assets.xcassets */; };
 		675A08F5289100A400048C31 /* ColorConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675A08F4289100A400048C31 /* ColorConstants.swift */; };
+		675EB3F3289101B9008D74A1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675EB3F2289101B9008D74A1 /* WelcomeView.swift */; };
+		675EB3F5289101F9008D74A1 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675EB3F4289101F9008D74A1 /* GreetingView.swift */; };
+		675EB3F728910318008D74A1 /* HotelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675EB3F628910318008D74A1 /* HotelList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		675A08E92890FCD600048C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		675A08EC2890FCD600048C31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		675A08F4289100A400048C31 /* ColorConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstants.swift; sourceTree = "<group>"; };
+		675EB3F2289101B9008D74A1 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		675EB3F4289101F9008D74A1 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
+		675EB3F628910318008D74A1 /* HotelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 		675A08E42890FCD200048C31 /* HotelList_assignment1 */ = {
 			isa = PBXGroup;
 			children = (
+				675EB3F028910141008D74A1 /* View */,
 				675A08F32891006E00048C31 /* Model */,
 				675A08E52890FCD200048C31 /* HotelList_assignment1App.swift */,
 				675A08E72890FCD200048C31 /* ContentView.swift */,
@@ -76,6 +83,24 @@
 				675A08F4289100A400048C31 /* ColorConstants.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		675EB3F028910141008D74A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				675EB3F12891019C008D74A1 /* Welcome */,
+				675EB3F628910318008D74A1 /* HotelList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		675EB3F12891019C008D74A1 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				675EB3F2289101B9008D74A1 /* WelcomeView.swift */,
+				675EB3F4289101F9008D74A1 /* GreetingView.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +176,9 @@
 				675A08F5289100A400048C31 /* ColorConstants.swift in Sources */,
 				675A08E82890FCD200048C31 /* ContentView.swift in Sources */,
 				675A08E62890FCD200048C31 /* HotelList_assignment1App.swift in Sources */,
+				675EB3F5289101F9008D74A1 /* GreetingView.swift in Sources */,
+				675EB3F728910318008D74A1 /* HotelList.swift in Sources */,
+				675EB3F3289101B9008D74A1 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
