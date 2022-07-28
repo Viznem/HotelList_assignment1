@@ -21,6 +21,8 @@
 		676FE987289264550096397A /* HotelDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FE986289264550096397A /* HotelDetail.swift */; };
 		676FE98928926FD20096397A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FE98828926FD20096397A /* CircleImage.swift */; };
 		676FE98B289275850096397A /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FE98A289275850096397A /* CardView.swift */; };
+		676FE98D289280960096397A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FE98C289280960096397A /* MapView.swift */; };
+		676FE98F28928C5D0096397A /* ReviewCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676FE98E28928C5D0096397A /* ReviewCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		676FE986289264550096397A /* HotelDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelDetail.swift; sourceTree = "<group>"; };
 		676FE98828926FD20096397A /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		676FE98A289275850096397A /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		676FE98C289280960096397A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		676FE98E28928C5D0096397A /* ReviewCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,7 @@
 				676FE983289260B40096397A /* Hotels */,
 				675A08E72890FCD200048C31 /* ContentView.swift */,
 				675EB3F12891019C008D74A1 /* Welcome */,
-				676FE98A289275850096397A /* CardView.swift */,
+				676FE98C289280960096397A /* MapView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -121,10 +125,12 @@
 		676FE983289260B40096397A /* Hotels */ = {
 			isa = PBXGroup;
 			children = (
+				676FE98A289275850096397A /* CardView.swift */,
 				675EB3F628910318008D74A1 /* HotelList.swift */,
 				676FE984289261090096397A /* HotelRow.swift */,
 				676FE986289264550096397A /* HotelDetail.swift */,
 				676FE98828926FD20096397A /* CircleImage.swift */,
+				676FE98E28928C5D0096397A /* ReviewCard.swift */,
 			);
 			path = Hotels;
 			sourceTree = "<group>";
@@ -203,10 +209,12 @@
 				675A08E82890FCD200048C31 /* ContentView.swift in Sources */,
 				676FE985289261090096397A /* HotelRow.swift in Sources */,
 				675A08E62890FCD200048C31 /* HotelList_assignment1App.swift in Sources */,
+				676FE98D289280960096397A /* MapView.swift in Sources */,
 				675EB3F5289101F9008D74A1 /* GreetingView.swift in Sources */,
 				676FE987289264550096397A /* HotelDetail.swift in Sources */,
 				675EB3F728910318008D74A1 /* HotelList.swift in Sources */,
 				676FE98228925DA10096397A /* ModelData.swift in Sources */,
+				676FE98F28928C5D0096397A /* ReviewCard.swift in Sources */,
 				676FE98928926FD20096397A /* CircleImage.swift in Sources */,
 				675EB3F3289101B9008D74A1 /* WelcomeView.swift in Sources */,
 				676FE98B289275850096397A /* CardView.swift in Sources */,

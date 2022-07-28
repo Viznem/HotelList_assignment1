@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct HotelDetail: View {
+    @State private var isShowingMap = false
     var hotel: Hotel
+    var i = 0
     
     var body: some View {
         ZStack {
@@ -18,21 +20,66 @@ struct HotelDetail: View {
                 
                 VStack{
                     
-                    
-                    CircleImage(image: hotel.image)
+                    ZStack{
+                        if isShowingMap{
+                            MapView(coordinate: hotel.locationCoordinate)
+                                .edgesIgnoringSafeArea(.top)
+                                .frame(height: 250)
+                        } else {
+                            CircleImage(image: hotel.image)
+                        }
+                    }
+                    .onTapGesture {
+                        isShowingMap.toggle()
+                    }
+
                     
                     Text(hotel.name)
                         .fontWeight(.bold)
                         .font(.system(size: 40))
                     
-                    CardView(text: "Sky Gem Hotel offers ultimate comfort and luxury. This 4-storied hotel is a beautiful combination of traditional grandeur and modern facilities. The 255 exclusive guest rooms are furnished with a range of modern amenities such as television and internet access. International direct-dial phone and safe are also available in any of these rooms. Wake-up call facility is also available in these rooms. ")
-        
+                    
+                    switch hotel.stars {
+                    case 5:
+                        Text("Luxury Hotel")
+                        HStack{
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                        }
+                    case 4:
+                        Text("Luxury Hotel")
+                        HStack{
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                        }
+                    case 3:
+                        Text("Middle Class Hotel")
+                        HStack{
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                        }
+                    default:
+                        Text("Common Hotel")
+                    }
+                    
+                    CardView(text: hotel.description)
+                        .padding(30)
+                    
+                    ReviewCard(review: "First Review")
+                        .padding(30)
                     
                 }
             }
         }
         .navigationBarTitleDisplayMode(.inline)
     }
+    
 }
 
 struct HotelDetail_Previews: PreviewProvider {

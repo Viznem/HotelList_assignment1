@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     var text: String
+    @State private var isShowingText = false
     
     var body: some View {
         ZStack {
@@ -19,15 +20,19 @@ struct CardView: View {
                         Text("Description")
                             .font(.largeTitle)
                             .foregroundColor(.black)
-
-                        Text(text)
-                            .font(.body)
-                            .foregroundColor(.gray)
+                        
+                        if isShowingText{
+                            Text(text)
+                                .font(.body)
+                                .foregroundColor(.gray)
+                        }
                     }
                     .padding(20)
                     .multilineTextAlignment(.center)
                 }
-                
+                .onTapGesture {
+                    isShowingText.toggle()
+                }
             }
     }
 
