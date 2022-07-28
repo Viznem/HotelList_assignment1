@@ -11,13 +11,32 @@ struct GreetingView: View {
     @Binding var active: Bool
     var body: some View {
         ZStack{
-            Text("GREETING MOTHER FUCKER!")
+            ColorConstants.rmitBlue.ignoresSafeArea(.all, edges: .all)
+            
+            VStack{
+                Text("GREETING Customer")
+                
+                Button(action: {
+                    active = false
+                }, label: {
+                    Capsule()
+                    .fill(Color.white.opacity(0.2))
+                    .padding(8)
+                    .frame(height:80)
+                    .overlay(Text("Get Started")
+                        .font(.system(.title3, design: .rounded))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white))
+                })
+            }
         }
     }
 }
 
 struct GreetingView_Previews: PreviewProvider {
     static var previews: some View {
-        GreetingView(active: .constant(true))
+        Group {
+            GreetingView(active: .constant(true))
+        }
     }
 }
