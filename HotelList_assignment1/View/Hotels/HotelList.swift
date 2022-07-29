@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct HotelList: View {
+    var luxuryHotels: [Hotel] {
+        hotels.filter {
+            $0.stars >= 3
+        }
+    }
+    
     var body: some View {
         NavigationView {
-            List(hotels){
+            List(luxuryHotels){
                 hotel in
                 NavigationLink{
                     HotelDetail(hotel: hotel)
@@ -31,8 +37,13 @@ struct MyButton: View {
 }
 
 struct CommonHotelList: View {
+    var commonHotels: [Hotel] {
+        hotels.filter {
+            $0.stars < 3
+        }
+    }
     var body: some View {
-            List(hotels){
+            List(commonHotels){
                 hotel in
                 NavigationLink{
                     HotelDetail(hotel: hotel)

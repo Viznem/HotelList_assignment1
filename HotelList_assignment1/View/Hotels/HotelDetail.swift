@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HotelDetail: View {
+    @State var review: String = ""
     @State private var isShowingMap = false
     var hotel: Hotel
     var i = 0
@@ -42,36 +43,23 @@ struct HotelDetail: View {
                     switch hotel.stars {
                     case 5:
                         Text("Luxury Hotel")
-                        HStack{
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                        }
                     case 4:
                         Text("Luxury Hotel")
-                        HStack{
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                        }
                     case 3:
                         Text("Middle Class Hotel")
-                        HStack{
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
-                        }
                     default:
                         Text("Common Hotel")
                     }
-                    
+                    HStack{
+                        ForEach((1...hotel.stars), id:\.self){ star in
+                            Image(systemName: "star").resizable().frame(width: 20, height: 20)
+                        }
+                    }
+
                     CardView(text: hotel.description)
                         .padding(30)
                     
-                    ReviewCard(review: "First Review")
+                    ReviewCard(thisHotel: hotel)
                         .padding(30)
                     
                 }
@@ -79,7 +67,6 @@ struct HotelDetail: View {
         }
         .navigationBarTitleDisplayMode(.inline)
     }
-    
 }
 
 struct HotelDetail_Previews: PreviewProvider {

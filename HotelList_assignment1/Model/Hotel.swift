@@ -14,6 +14,7 @@ struct Hotel: Identifiable {
     var name: String
     var stars: Int
     var description: String
+    var reviews: [String]
     
     var imageName: String
     var image: Image {
