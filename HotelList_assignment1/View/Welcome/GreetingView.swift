@@ -11,27 +11,61 @@ import RiveRuntime
 struct GreetingView: View {
     @Binding var active: Bool
     var body: some View {
+        let button = RiveViewModel(fileName: "button");
+        
         ZStack{
             RiveViewModel(fileName: "shapes").view()
                 .ignoresSafeArea()
+                .blur(radius: 5)
+                .background(
+                    Image("Spline")
+                        .resizable()
+                        .blur(radius: 50)
+                        .offset(x:50,y:100)
+                        
+                )
                 
-            
+                
             VStack{
-                Text("GREETING Customer")
-            
                 
-                Button(action: {
-                    active = false
-                }, label: {
-                    Capsule()
-                    .fill(Color.white.opacity(0.2))
-                    .padding(8)
-                    .frame(height:80)
-                    .overlay(Text("Get Started")
-                        .font(.system(.title3, design: .rounded))
-                        .fontWeight(.bold)
-                        .foregroundColor(.white))
-                })
+                
+                Spacer()
+                
+                Text("LET'S EXPLORE & FIND YOUR BEST HOTEL")
+                    .font(.custom("DancingScript-SemiBold", size: 55, relativeTo: .largeTitle))
+                    
+                
+                Spacer()
+                
+                Image("hotelIcon")
+                    .resizable()
+                    .frame(width: 100, height: 100, alignment: .topTrailing)
+                    .cornerRadius(15)
+                
+                Text("Find the best hotel ever")
+                    .font(.custom("Poppins Bold", size: 15))
+                
+                button.view()
+                    .frame(width:236, height: 64)
+                    .overlay(
+                        Label("Let's start!", systemImage: "arrow.forward")
+                            .offset(x: 4, y: 4)
+                    )
+                    .background(
+                        Color.black
+                            .cornerRadius(30)
+                            .blur(radius: 15)
+                            .opacity(0.3)
+                            .offset(y: 10)
+                    )
+                    .onTapGesture {
+                        button.play(animationName: "active")
+                        DispatchQueue.main.asyncAfter(deadline: .now()+0.8) {
+                            active = false
+                        }
+                    }
+                
+                Spacer()
             }
         }
     }

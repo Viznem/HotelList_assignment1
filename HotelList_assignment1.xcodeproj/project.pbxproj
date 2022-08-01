@@ -20,6 +20,7 @@
 		675DA7052897D18E004812FC /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = 675DA6FE2897D18E004812FC /* button.riv */; };
 		675DA7062897D18E004812FC /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = 675DA6FF2897D18E004812FC /* icons.riv */; };
 		675DA7092897D228004812FC /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 675DA7082897D228004812FC /* RiveRuntime */; };
+		675DA71F2897ED46004812FC /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 675DA71C2897ED46004812FC /* Poppins-Bold.ttf */; };
 		675EB3F3289101B9008D74A1 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675EB3F2289101B9008D74A1 /* WelcomeView.swift */; };
 		675EB3F5289101F9008D74A1 /* GreetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675EB3F4289101F9008D74A1 /* GreetingView.swift */; };
 		675EB3F728910318008D74A1 /* HotelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675EB3F628910318008D74A1 /* HotelList.swift */; };
@@ -47,6 +48,9 @@
 		675DA6FD2897D18E004812FC /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
 		675DA6FE2897D18E004812FC /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
 		675DA6FF2897D18E004812FC /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
+		675DA71C2897ED46004812FC /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		675DA7212897ED5F004812FC /* DancingScript-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DancingScript-SemiBold.ttf"; sourceTree = "<group>"; };
+		675DA7222897EDB8004812FC /* HotelList-assignment1-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HotelList-assignment1-Info.plist"; sourceTree = SOURCE_ROOT; };
 		675EB3F2289101B9008D74A1 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		675EB3F4289101F9008D74A1 /* GreetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreetingView.swift; sourceTree = "<group>"; };
 		675EB3F628910318008D74A1 /* HotelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelList.swift; sourceTree = "<group>"; };
@@ -91,8 +95,10 @@
 		675A08E42890FCD200048C31 /* HotelList_assignment1 */ = {
 			isa = PBXGroup;
 			children = (
+				675DA7222897EDB8004812FC /* HotelList-assignment1-Info.plist */,
 				675DA6F82897D18E004812FC /* RiveAssets */,
 				675EB3F028910141008D74A1 /* View */,
+				675DA71A2897ED46004812FC /* Fonts */,
 				675A08F32891006E00048C31 /* Model */,
 				675A08E52890FCD200048C31 /* HotelList_assignment1App.swift */,
 				675A08E92890FCD600048C31 /* Assets.xcassets */,
@@ -131,6 +137,15 @@
 				675DA6FF2897D18E004812FC /* icons.riv */,
 			);
 			path = RiveAssets;
+			sourceTree = "<group>";
+		};
+		675DA71A2897ED46004812FC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				675DA7212897ED5F004812FC /* DancingScript-SemiBold.ttf */,
+				675DA71C2897ED46004812FC /* Poppins-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		675EB3F028910141008D74A1 /* View */ = {
@@ -236,6 +251,7 @@
 				675DA7032897D18E004812FC /* menu_button.riv in Resources */,
 				675DA7002897D18E004812FC /* house.riv in Resources */,
 				675DA7052897D18E004812FC /* button.riv in Resources */,
+				675DA71F2897ED46004812FC /* Poppins-Bold.ttf in Resources */,
 				675A08EA2890FCD600048C31 /* Assets.xcassets in Resources */,
 				675DA7012897D18E004812FC /* confetti.riv in Resources */,
 				675DA7062897D18E004812FC /* icons.riv in Resources */,
@@ -396,6 +412,7 @@
 				DEVELOPMENT_TEAM = V6Q9YDCPQM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HotelList-assignment1-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -425,6 +442,7 @@
 				DEVELOPMENT_TEAM = V6Q9YDCPQM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "HotelList-assignment1-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
