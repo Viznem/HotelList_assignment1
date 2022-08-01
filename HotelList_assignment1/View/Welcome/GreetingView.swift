@@ -6,15 +6,19 @@
 //
 
 import SwiftUI
+import RiveRuntime
 
 struct GreetingView: View {
     @Binding var active: Bool
     var body: some View {
         ZStack{
-            ColorConstants.rmitBlue.ignoresSafeArea(.all, edges: .all)
+            RiveViewModel(fileName: "shapes").view()
+                .ignoresSafeArea()
+                
             
             VStack{
                 Text("GREETING Customer")
+            
                 
                 Button(action: {
                     active = false
