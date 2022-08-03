@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import RiveRuntime
 
 struct HotelDetail: View {
     @State var review: String = ""
     @State private var isShowingMap = false
+    let likeButton = RiveViewModel(fileName: "twitter_like_button", stateMachineName: "stateMachine")
     var hotel: Hotel
     var i = 0
     
@@ -20,6 +22,12 @@ struct HotelDetail: View {
             ScrollView {
                 
                 VStack{
+                    Button{
+                        likeButton.setInput("checked", value: true)
+                    }label: {
+                        likeButton.view().frame(width: 200, height: 200)
+                    }
+                    
                     
                     ZStack{
                         if isShowingMap{

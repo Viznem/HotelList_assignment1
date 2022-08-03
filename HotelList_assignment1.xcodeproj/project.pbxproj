@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673535B1289A2C4B00411828 /* twitter_like_button.riv in Resources */ = {isa = PBXBuildFile; fileRef = 673535B0289A2C4B00411828 /* twitter_like_button.riv */; };
 		675A08E62890FCD200048C31 /* HotelList_assignment1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675A08E52890FCD200048C31 /* HotelList_assignment1App.swift */; };
 		675A08E82890FCD200048C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675A08E72890FCD200048C31 /* ContentView.swift */; };
 		675A08EA2890FCD600048C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 675A08E92890FCD600048C31 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		673535B0289A2C4B00411828 /* twitter_like_button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = twitter_like_button.riv; sourceTree = "<group>"; };
 		675A08E22890FCD200048C31 /* HotelList_assignment1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HotelList_assignment1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		675A08E52890FCD200048C31 /* HotelList_assignment1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotelList_assignment1App.swift; sourceTree = "<group>"; };
 		675A08E72890FCD200048C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		675DA6F82897D18E004812FC /* RiveAssets */ = {
 			isa = PBXGroup;
 			children = (
+				673535B0289A2C4B00411828 /* twitter_like_button.riv */,
 				675DA6F92897D18E004812FC /* house.riv */,
 				675DA6FA2897D18E004812FC /* confetti.riv */,
 				675DA6FB2897D18E004812FC /* check.riv */,
@@ -151,9 +154,9 @@
 		675EB3F028910141008D74A1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				675EB3F12891019C008D74A1 /* Welcome */,
 				676FE983289260B40096397A /* Hotels */,
 				675A08E72890FCD200048C31 /* ContentView.swift */,
-				675EB3F12891019C008D74A1 /* Welcome */,
 				676FE98C289280960096397A /* MapView.swift */,
 			);
 			path = View;
@@ -247,6 +250,7 @@
 			files = (
 				675DA7042897D18E004812FC /* shapes.riv in Resources */,
 				675DA7022897D18E004812FC /* check.riv in Resources */,
+				673535B1289A2C4B00411828 /* twitter_like_button.riv in Resources */,
 				675A08ED2890FCD600048C31 /* Preview Assets.xcassets in Resources */,
 				675DA7032897D18E004812FC /* menu_button.riv in Resources */,
 				675DA7002897D18E004812FC /* house.riv in Resources */,
