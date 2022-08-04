@@ -11,7 +11,8 @@ import RiveRuntime
 struct HotelDetail: View {
     @State var review: String = ""
     @State private var isShowingMap = false
-    let likeButton = RiveViewModel(fileName: "twitter_like_button", stateMachineName: "stateMachine")
+    @State var isFavorite = false
+    let likeButton = RiveViewModel(fileName: "twitter_like_button")
     var hotel: Hotel
     var i = 0
     
@@ -22,13 +23,35 @@ struct HotelDetail: View {
             ScrollView {
                 
                 VStack{
-                    Button{
-                        likeButton.setInput("checked", value: true)
-                    }label: {
-                        likeButton.view().frame(width: 200, height: 200)
+                    HStack{
+                        Spacer()
+                        Button{
+                            if (isFavorite == false){
+                                isFavorite = true
+                            }else{
+                                isFavorite = false
+                            }
+                            
+                        }label: {
+                                if isFavorite{
+                                    Image(systemName: "heart.fill")
+                                        .resizable()
+                                        .frame(width: 30, height: 30, alignment: .leading)
+                                        .foregroundColor(.red)
+                                        .padding()
+                                }else{
+                                    Image(systemName: "heart")
+                                        .resizable()
+                                        .frame(width: 30, height: 30, alignment: .leading)
+                                        .foregroundColor(.black)
+                                        .cornerRadius(7)
+                                        .padding()
+                                        
+                                }
+                            }
+
                     }
-                    
-                    
+
                     ZStack{
                         if isShowingMap{
                             MapView(coordinate: hotel.locationCoordinate)
