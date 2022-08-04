@@ -4,18 +4,25 @@
 //
 //  Created by Thinh, Nguyen Truong on 28/07/2022.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659 iOS Development
+  Semester: 2022B
+  Assessment: Assignment 2
+  Author: Nguyen Truong Thinh
+  ID: s3777196
+  Created  date: 27/07/2022
+  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
+  Acknowledgement: Acknowledge the resources that you use here.
+*/
 
 import SwiftUI
 
 struct ReviewCard: View {
     var thisHotel: Hotel
-    @State var review: String = "Hello World"
+    @State var review: String = ""
     @State private var isShowingText = false
     @State private var isShowingInput = false
-    
-    func save(){
-        hotels[thisHotel.id].reviews.append(review)
-    }
     
     var body: some View {
     
@@ -34,37 +41,65 @@ struct ReviewCard: View {
                         }
 
                         if isShowingText{
-                            Button(action: {
-                                isShowingInput = true
-                            }, label: {
-                                Image(systemName: "plus.circle.fill")
-                                    .foregroundColor(.black)
-                            }).frame(alignment: .trailing)
-                                .font(Font.system(.title).bold())
                             
-                            
-                             
-                            TextField("Add Review", text: $review)
-                            Button("submit"){save()}
-                                
-                            
-                            
-                            
-                            ForEach(thisHotel.reviews, id:\.self) { review in
-                                HStack{
-                                    Image("user")
-                                    Text(review)
-                                        .font(.body)
-                                        .foregroundColor(.gray)
-                                }.frame(maxWidth: .infinity ,alignment: .leading)
-                            }
+                            addButton
+
+                            reviewContent
+
                         }
                     }
                     .padding(20)
                     .multilineTextAlignment(.center)
-                }
+            
+            
+            if isShowingInput{
+                AddCommentView()
+                    .overlay(
+                        Button{
+                            withAnimation(.spring()){
+                                isShowingInput = false
+                            }
+                        }label: {
+                            Image(systemName: "xmark")
+                                .frame(width: 35, height: 35)
+                                .foregroundColor(.black)
+                                .background(.white)
+                                .mask(Circle())
+                                .shadow(radius: 5)
+                        }
+                            .frame(maxHeight: .infinity, alignment: .topTrailing)
+                    )
             }
+        }
     }
+    
+    
+    var addButton: some View{
+        HStack{
+            Button(action: {
+                isShowingInput.toggle()
+            }, label: {
+                Image(systemName: "plus.circle.fill")
+                    .foregroundColor(.black)
+                Text("Add Review").foregroundColor(.black)
+            })
+            
+            Spacer()
+        }
+
+    }
+    
+    var reviewContent: some View{
+        ForEach(thisHotel.reviews, id:\.self) { review in
+            HStack{
+                Image("user")
+                Text(review)
+                    .font(.body)
+                    .foregroundColor(.gray)
+            }.frame(maxWidth: .infinity ,alignment: .leading)
+        }
+    }
+}
 
 
 struct ReviewCard_Previews: PreviewProvider {

@@ -4,10 +4,21 @@
 //
 //  Created by Thinh, Nguyen Truong on 27/07/2022.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659 iOS Development
+  Semester: 2022B
+  Assessment: Assignment 2
+  Author: Nguyen Truong Thinh
+  ID: s3777196
+  Created  date: 27/07/2022
+  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
+  Acknowledgement: Acknowledge the resources that you use here.
+*/
 
 import SwiftUI
 import RiveRuntime
-// fasdfsa
+
 struct GreetingView: View {
     @Binding var active: Bool
     var body: some View {
@@ -32,7 +43,7 @@ struct GreetingView: View {
                 Spacer()
                 
                 Text("LET'S EXPLORE & FIND YOUR BEST HOTEL")
-                    .font(.custom("DancingScript-SemiBold", size: 55, relativeTo: .largeTitle))
+                    .font(.custom("Poppins Bold", size: 55, relativeTo: .largeTitle))
                     
                 
                 Spacer()
@@ -49,6 +60,7 @@ struct GreetingView: View {
                     .frame(width:236, height: 64)
                     .overlay(
                         Label("Let's start!", systemImage: "arrow.forward")
+                            .font(.custom("Poppins Bold", size: 17))
                             .offset(x: 4, y: 4)
                     )
                     .background(

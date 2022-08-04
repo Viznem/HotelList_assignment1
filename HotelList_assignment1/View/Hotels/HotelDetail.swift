@@ -4,6 +4,17 @@
 //
 //  Created by Thinh, Nguyen Truong on 28/07/2022.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659 iOS Development
+  Semester: 2022B
+  Assessment: Assignment 2
+  Author: Nguyen Truong Thinh
+  ID: s3777196
+  Created  date: 27/07/2022
+  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
+  Acknowledgement: Acknowledge the resources that you use here.
+*/
 
 import SwiftUI
 import RiveRuntime
@@ -12,8 +23,8 @@ struct HotelDetail: View {
     @State var review: String = ""
     @State private var isShowingMap = false
     @State var isFavorite = false
+    @State var hotel: Hotel
     let likeButton = RiveViewModel(fileName: "twitter_like_button")
-    var hotel: Hotel
     var i = 0
     
     var body: some View {
@@ -26,14 +37,10 @@ struct HotelDetail: View {
                     HStack{
                         Spacer()
                         Button{
-                            if (isFavorite == false){
-                                isFavorite = true
-                            }else{
-                                isFavorite = false
-                            }
+                            hotel.isFavorite.toggle()
                             
                         }label: {
-                                if isFavorite{
+                            if hotel.isFavorite{
                                     Image(systemName: "heart.fill")
                                         .resizable()
                                         .frame(width: 30, height: 30, alignment: .leading)
