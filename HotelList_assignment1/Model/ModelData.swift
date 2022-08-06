@@ -12,13 +12,13 @@
   Author: Nguyen Truong Thinh
   ID: s3777196
   Created  date: 27/07/2022
-  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
-  Acknowledgement: Acknowledge the resources that you use here.
+  Last modified: 6/08/2022
 */
 
 import Foundation
 import CoreLocation
 
+//static data
 var hotels: [Hotel] = [
     Hotel(id: 0, name: "Blue Diamond", stars: 5, description: "Sky Gem Hotel offers ultimate comfort and luxury. This 4-storied hotel is a beautiful combination of traditional grandeur and modern facilities. The 255 exclusive guest rooms are furnished with a range of modern amenities such as television and internet access. International direct-dial phone and safe are also available in any of these rooms. Wake-up call facility is also available in these rooms. ", reviews: ["First comments", "Second comment", "hahahaha I'm dying!"] ,imageName: "blue-diamond", locationCoordinate: CLLocationCoordinate2D(latitude: 10.766411, longitude:106.676684), isFavorite: true),
     

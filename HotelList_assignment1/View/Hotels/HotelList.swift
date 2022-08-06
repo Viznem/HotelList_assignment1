@@ -12,20 +12,21 @@
   Author: Nguyen Truong Thinh
   ID: s3777196
   Created  date: 27/07/2022
-  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
-  Acknowledgement: Acknowledge the resources that you use here.
+  Last modified: 6/08/2022
 */
 
 import SwiftUI
 
 struct HotelList: View {
     @State var showFavoriteOnly = false
+    // Filter hotels that has 3 star or above
     var luxuryHotels: [Hotel] {
         hotels.filter {
             $0.stars >= 3
         }
     }
     
+    // Luxury hotels list view
     var body: some View {
         NavigationView {
             List{
@@ -43,13 +44,16 @@ struct HotelList: View {
     }
 }
 
+//button to navigate to Common hotel list
 struct MyButton: View {
     var body: some View {
             NavigationLink("Common Hotels", destination: CommonHotelList())
         }
 }
 
+//Common hotels list view
 struct CommonHotelList: View {
+    //filter hotels only have 1 or 2 star
     var commonHotels: [Hotel] {
         hotels.filter {
             $0.stars < 3

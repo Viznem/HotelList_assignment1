@@ -12,8 +12,7 @@
   Author: Nguyen Truong Thinh
   ID: s3777196
   Created  date: 27/07/2022
-  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
-  Acknowledgement: Acknowledge the resources that you use here.
+  Last modified: 6/08/2022
 */
 
 import SwiftUI
@@ -24,7 +23,6 @@ struct HotelDetail: View {
     @State private var isShowingMap = false
     @State var isFavorite = false
     @State var hotel: Hotel
-    let likeButton = RiveViewModel(fileName: "twitter_like_button")
     var i = 0
     
     var body: some View {
@@ -40,6 +38,7 @@ struct HotelDetail: View {
                             hotel.isFavorite.toggle()
                             
                         }label: {
+                            // Check if Hotel is your favorite hotel
                             if hotel.isFavorite{
                                     Image(systemName: "heart.fill")
                                         .resizable()
@@ -56,9 +55,9 @@ struct HotelDetail: View {
                                         
                                 }
                             }
-
                     }
-
+                    
+                    //Condition to show map location or Image.
                     ZStack{
                         if isShowingMap{
                             MapView(coordinate: hotel.locationCoordinate)
@@ -72,12 +71,12 @@ struct HotelDetail: View {
                         isShowingMap.toggle()
                     }
 
-                    
+                    //Hotel Name
                     Text(hotel.name)
                         .fontWeight(.bold)
                         .font(.system(size: 40))
                     
-                    
+                    // Classify hotels into different category based on stars number.
                     switch hotel.stars {
                     case 5:
                         Text("Luxury Hotel")

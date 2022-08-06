@@ -4,6 +4,16 @@
 //
 //  Created by Thinh, Nguyen Truong on 04/08/2022.
 //
+/*
+  RMIT University Vietnam
+  Course: COSC2659 iOS Development
+  Semester: 2022B
+  Assessment: Assignment 2
+  Author: Nguyen Truong Thinh
+  ID: s3777196
+  Created  date: 04/08/2022
+  Last modified: 6/08/2022
+*/
 
 import SwiftUI
 
@@ -15,9 +25,11 @@ struct AddCommentView: View {
         ZStack{
             
             VStack(spacing: 24){
+                //Title
                 Text ("Add Review")
                     .font(.largeTitle)
                 
+                //Name text box
                 VStack(alignment: .leading){
                     Text("Name")
                         .font(.headline)
@@ -36,7 +48,7 @@ struct AddCommentView: View {
                         )
                 }
                 
-            
+                //Review text box
                 VStack(alignment: .leading){
                     Text("Review")
                         .font(.headline)
@@ -56,9 +68,8 @@ struct AddCommentView: View {
                         )
                 }
                 
+                //submit button
                 Button{
-                    
-                    
                 }label: {
                     Label("Submit", systemImage: "arrow.right")
                         .padding(15)
@@ -69,8 +80,6 @@ struct AddCommentView: View {
                         .shadow(radius: 15, x:0,y:10)
                 }
 
-                    
-                
             }
             .padding(30)
             .background(.regularMaterial)

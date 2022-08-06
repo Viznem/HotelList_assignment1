@@ -12,8 +12,7 @@
   Author: Nguyen Truong Thinh
   ID: s3777196
   Created  date: 27/07/2022
-  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
-  Acknowledgement: Acknowledge the resources that you use here.
+  Last modified: 6/08/2022
 */
 
 import SwiftUI
@@ -32,6 +31,7 @@ struct CardView: View {
                             .font(.largeTitle)
                             .foregroundColor(.black)
                         
+                        //check condition to show the text
                         if isShowingText{
                             Text(text)
                                 .font(.body)

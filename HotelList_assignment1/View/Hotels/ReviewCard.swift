@@ -12,8 +12,7 @@
   Author: Nguyen Truong Thinh
   ID: s3777196
   Created  date: 27/07/2022
-  Last modified: dd/mm/yyyy (e.g. 05/08/2022)
-  Acknowledgement: Acknowledge the resources that you use here.
+  Last modified: 6/08/2022
 */
 
 import SwiftUI
@@ -51,7 +50,7 @@ struct ReviewCard: View {
                     .padding(20)
                     .multilineTextAlignment(.center)
             
-            
+            //Check condition to show Add Comment Form
             if isShowingInput{
                 AddCommentView()
                     .overlay(
@@ -89,6 +88,7 @@ struct ReviewCard: View {
 
     }
     
+    // Looping to show all the reviews in the specific hotel
     var reviewContent: some View{
         ForEach(thisHotel.reviews, id:\.self) { review in
             HStack{
