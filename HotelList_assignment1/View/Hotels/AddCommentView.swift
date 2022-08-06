@@ -58,6 +58,7 @@ struct AddCommentView: View {
                 
                 Button{
                     
+                    
                 }label: {
                     Label("Submit", systemImage: "arrow.right")
                         .padding(15)
